@@ -1,0 +1,221 @@
+-- phpMyAdmin SQL Dump
+-- version 4.2.11
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Dec 06, 2017 at 11:06 AM
+-- Server version: 5.6.21
+-- PHP Version: 5.6.3
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `skripsi`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cluster_tanah`
+--
+
+CREATE TABLE IF NOT EXISTS `cluster_tanah` (
+`ID` int(1) NOT NULL,
+  `CLUSTER` varchar(20) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `cluster_tanah`
+--
+
+INSERT INTO `cluster_tanah` (`ID`, `CLUSTER`) VALUES
+(0, 'SESUAI'),
+(1, 'TIDAK SESUAI'),
+(2, 'UNCLASSIFIED');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `t_citra`
+--
+
+CREATE TABLE IF NOT EXISTS `t_citra` (
+`ID` int(3) NOT NULL,
+  `NAMA` varchar(20) NOT NULL,
+  `R` int(3) NOT NULL,
+  `G` int(3) NOT NULL,
+  `B` int(3) NOT NULL,
+  `M` int(3) NOT NULL,
+  `V` int(4) NOT NULL,
+  `S` int(4) NOT NULL,
+  `K` int(4) NOT NULL,
+  `E` int(4) NOT NULL,
+  `C1` double NOT NULL,
+  `C2` double NOT NULL,
+  `TARGET` int(1) NOT NULL,
+  `HASIL` int(1) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=93 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `t_citra`
+--
+
+INSERT INTO `t_citra` (`ID`, `NAMA`, `R`, `G`, `B`, `M`, `V`, `S`, `K`, `E`, `C1`, `C2`, `TARGET`, `HASIL`) VALUES
+(42, 'TS_1.JPG', 106, 104, 105, 105, 1234, 0, -1, -7, 0.72620279333426, 0.27379720666574, 0, 0),
+(43, 'TS_2.JPG', 72, 70, 70, 71, 814, 0, 0, -7, 0.86613751645034, 0.13386248354966, 0, 0),
+(44, 'TS_3.JPG', 123, 122, 124, 123, 1826, 0, -1, -7, 0.72312341734979, 0.27687658265021, 0, 0),
+(45, 'TS_4.JPG', 68, 66, 65, 66, 998, 0, 0, -7, 0.86607233414999, 0.13392766585001, 0, 0),
+(46, 'TS_5.JPG', 114, 111, 111, 112, 1448, -1, 0, -7, 0.88351598524579, 0.11648401475421, 0, 0),
+(47, 'TS_6.JPG', 105, 99, 94, 99, 1716, 0, -1, -7, 0.70490562170055, 0.29509437829945, 0, 0),
+(48, 'TS_7.JPG', 89, 83, 76, 82, 2165, 0, -1, -7, 0.68693984570823, 0.31306015429177, 0, 0),
+(49, 'TS_8.JPG', 97, 93, 86, 92, 1047, 0, -1, -7, 0.69451643502881, 0.30548356497119, 0, 0),
+(50, 'TS_9.JPG', 93, 90, 84, 89, 1053, 0, -1, -7, 0.69157320760843, 0.30842679239157, 0, 0),
+(51, 'TS_10.JPG', 108, 102, 96, 102, 1346, 0, -1, -7, 0.77235576936104, 0.22764423063896, 0, 0),
+(52, 'TS_11.JPG', 114, 109, 100, 108, 1475, 0, -1, -7, 0.77271236588998, 0.22728763411002, 0, 0),
+(53, 'TS_12.JPG', 95, 91, 83, 90, 2091, 0, -1, -7, 0.69216271473749, 0.30783728526251, 0, 0),
+(54, 'TS_13.JPG', 109, 105, 98, 104, 2246, 0, -1, -7, 0.7242982930282, 0.2757017069718, 0, 0),
+(55, 'TS_14.JPG', 90, 83, 72, 82, 1175, 0, -1, -7, 0.68790785735099, 0.31209214264901, 0, 0),
+(56, 'TS_15.JPG', 106, 93, 74, 91, 1730, 0, -1, -7, 0.69578838857938, 0.30421161142062, 0, 0),
+(57, 'TS_16.JPG', 66, 61, 56, 61, 1875, 1, 0, -7, 0.8659865562909, 0.1340134437091, 0, 0),
+(58, 'TS_17.JPG', 75, 71, 70, 72, 947, 0, -1, -7, 0.68285615888359, 0.31714384111641, 0, 0),
+(59, 'TS_18.JPG', 88, 82, 75, 82, 2166, 0, -1, -7, 0.6866465627202, 0.3133534372798, 0, 0),
+(60, 'TS_19.JPG', 94, 89, 82, 88, 1235, 0, -1, -7, 0.69199283053831, 0.30800716946169, 0, 0),
+(61, 'TS_20.JPG', 110, 103, 96, 103, 1523, 0, -1, -7, 0.71842392183923, 0.28157607816077, 0, 0),
+(62, 'TS_21.JPG', 135, 126, 115, 125, 1139, -1, 0, -7, 0.86978105706384, 0.13021894293616, 0, 0),
+(63, 'TS_22.JPG', 86, 82, 75, 81, 2075, 0, -1, -7, 0.68628740831741, 0.31371259168258, 0, 0),
+(64, 'TS_23.JPG', 108, 106, 108, 107, 1226, 0, -1, -7, 0.74437427703673, 0.25562572296327, 0, 0),
+(65, 'TS_24.JPG', 68, 66, 66, 67, 1037, 0, -1, -7, 0.68165054095017, 0.31834945904983, 0, 0),
+(66, 'TS_25.JPG', 111, 105, 99, 105, 1678, 0, -1, -7, 0.72899406631436, 0.27100593368564, 0, 0),
+(67, 'TTS_1.JPG', 176, 142, 108, 142, 406, 1, 2, -6, 0.39858267336238, 0.60141732663762, 1, 1),
+(68, 'TTS_2.JPG', 172, 132, 86, 130, 199, 0, 12, -5, 0.67952445693564, 0.32047554306436, 1, 0),
+(69, 'TTS_3.JPG', 153, 134, 113, 133, 1634, 0, 0, -7, 0.86696634950058, 0.13303365049942, 1, 0),
+(70, 'TTS_4.JPG', 136, 123, 106, 122, 1430, 0, 0, -7, 0.86997390166122, 0.13002609833878, 1, 0),
+(71, 'TTS_5.JPG', 180, 163, 142, 162, 712, 0, 0, -7, 0.86581158775881, 0.13418841224119, 1, 0),
+(72, 'TTS_6.JPG', 175, 143, 123, 147, 503, -1, 2, -6, 0.39648211266708, 0.60351788733292, 1, 1),
+(73, 'TTS_7.JPG', 168, 124, 91, 128, 307, -1, 2, -6, 0.43183421766055, 0.56816578233945, 1, 1),
+(74, 'TTS_8.JPG', 164, 128, 98, 130, 889, -1, 1, -7, 0.17093155176651, 0.82906844823349, 1, 1),
+(75, 'TTS_9.JPG', 139, 119, 88, 115, 1004, -1, 2, -7, 0.53078538718813, 0.46921461281187, 1, 0),
+(76, 'TTS_10.JPG', 154, 129, 96, 126, 680, -1, 2, -6, 0.43082041498105, 0.56917958501895, 1, 1),
+(77, 'TTS_11.JPG', 208, 158, 80, 149, 1014, -1, 0, -7, 0.86585032660067, 0.13414967339933, 1, 0),
+(78, 'TTS_12.JPG', 203, 159, 84, 149, 847, -1, 1, -7, 0.15934025237697, 0.84065974762303, 1, 1),
+(79, 'TTS_13.JPG', 218, 171, 98, 162, 1098, -1, 0, -7, 0.86564243962426, 0.13435756037574, 1, 0),
+(80, 'TTS_14.JPG', 176, 118, 51, 115, 1015, 0, 0, -7, 0.87087477849179, 0.12912522150821, 1, 0),
+(81, 'TTS_15.JPG', 218, 162, 83, 154, 745, -1, 1, -7, 0.15835702884402, 0.84164297115598, 1, 1),
+(82, 'TTS_16.JPG', 191, 139, 68, 133, 1923, -1, 0, -7, 0.86640685729381, 0.13359314270619, 1, 0),
+(83, 'TTS_17.JPG', 202, 149, 71, 141, 1477, -1, 0, -7, 0.8661219870206, 0.1338780129794, 1, 0),
+(84, 'TTS_18.JPG', 171, 142, 89, 134, 1223, 0, 0, -7, 0.86654990860519, 0.13345009139481, 1, 0),
+(85, 'TTS_19.JPG', 180, 140, 88, 136, 443, -1, 1, -6, 0.16401059800753, 0.83598940199247, 1, 1),
+(86, 'TTS_20.JPG', 171, 143, 103, 139, 614, 0, 1, -7, 0.16358721780152, 0.83641278219848, 1, 1),
+(87, 'TTS_21.JPG', 169, 140, 98, 136, 885, -1, 1, -7, 0.16493715755934, 0.83506284244066, 1, 1),
+(88, 'TTS_22.JPG', 178, 143, 96, 139, 777, -1, 1, -7, 0.16314925271325, 0.83685074728675, 1, 1),
+(89, 'TTS_23.JPG', 195, 161, 124, 160, 812, -1, 2, -7, 0.3851835996994, 0.6148164003006, 1, 1),
+(90, 'TTS_24.JPG', 187, 153, 121, 154, 803, -1, 2, -7, 0.38922749178568, 0.61077250821432, 1, 1),
+(92, 'TTS_25.JPG', 182, 134, 87, 134, 478, -1, 2, -6, 0.40741833181779, 0.59258166818221, 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `t_cluster`
+--
+
+CREATE TABLE IF NOT EXISTS `t_cluster` (
+  `FITUR` char(1) NOT NULL,
+  `PC_1` double NOT NULL,
+  `PC_2` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `t_cluster`
+--
+
+INSERT INTO `t_cluster` (`FITUR`, `PC_1`, `PC_2`) VALUES
+('G', 112.33414390985, 450.94030015152),
+('K', -0.12401763379629, 0.80065078183456),
+('M', 110.46944409345, 442.78477037108),
+('R', 129.8048452492, 534.09606220797),
+('V', 1344.0417529458, 4500.269956261);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `t_info`
+--
+
+CREATE TABLE IF NOT EXISTS `t_info` (
+`ID` int(2) NOT NULL,
+  `KODE` char(1) NOT NULL,
+  `FITUR` enum('Red','Green','Blue','Mean','Variance','Skewness','Kurtosis','Entropy') NOT NULL,
+  `NILAI` float NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `t_info`
+--
+
+INSERT INTO `t_info` (`ID`, `KODE`, `FITUR`, `NILAI`) VALUES
+(1, 'R', 'Red', 1),
+(2, 'G', 'Green', 1),
+(3, 'B', 'Blue', 0.655098),
+(4, 'M', 'Mean', 1),
+(5, 'V', 'Variance', 1),
+(6, 'S', 'Skewness', 0.313076),
+(7, 'K', 'Kurtosis', 0.73672),
+(8, 'E', 'Entropy', 0.156513);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `cluster_tanah`
+--
+ALTER TABLE `cluster_tanah`
+ ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `t_citra`
+--
+ALTER TABLE `t_citra`
+ ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `t_cluster`
+--
+ALTER TABLE `t_cluster`
+ ADD PRIMARY KEY (`FITUR`);
+
+--
+-- Indexes for table `t_info`
+--
+ALTER TABLE `t_info`
+ ADD PRIMARY KEY (`ID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `cluster_tanah`
+--
+ALTER TABLE `cluster_tanah`
+MODIFY `ID` int(1) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `t_citra`
+--
+ALTER TABLE `t_citra`
+MODIFY `ID` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=93;
+--
+-- AUTO_INCREMENT for table `t_info`
+--
+ALTER TABLE `t_info`
+MODIFY `ID` int(2) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
